@@ -9,7 +9,7 @@ from pytorch_lightning import seed_everything
 seed_everything(7)
 
 PATH_DATASETS = os.environ.get('PATH_DATASETS', '.')
-AVAIL_GPUS = "1"
+AVAIL_GPUS = "2"
 # AVAIL_GPUS = min(1, torch.cuda.device_count())
 # AVAIL_GPUS = "1,2"
 BATCH_SIZE = 256 if AVAIL_GPUS else 64
