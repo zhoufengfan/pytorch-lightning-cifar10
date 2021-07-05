@@ -19,9 +19,12 @@ Edit the CIFAR10.cifar10_root_dir to the path of your dataset.
 
 Run the following command to start your experiment:
 ``` bash
-python train.py
+CUDA_VISIBLE_DEVICES=[your_avail_gpus] python train.py
 ```
-
+(e.g
+`
+CUDA_VISIBLE_DEVICES=0,1,2 python train.py
+`)
 ## Reuslt
 Test accuracy: 0.847
 
