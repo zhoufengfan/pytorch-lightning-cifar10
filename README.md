@@ -2,6 +2,8 @@
 The code is a simple example that shows the basic use of pytorch-lightning in CIFAR10 dataset. It includes the training, testing, validating, saving checkpoints, and logging of the model. Some code is from https://pytorch-lightning.readthedocs.io/. The copyright of the code belongs to the original authors of the code.
 
 ## Quickstart
+Firstly, you should install NCCL on your machine.
+
 Enter the directory that you want to save the code.
 ```bash
 https://github.com/zhoufengfan/pytorch-lightning-cifar10.git

@@ -8,7 +8,7 @@ from PIL import Image
 class CIFAR10(Dataset):
     def __init__(self, train, transform):
         super().__init__()
-        self.cifar10_root_dir = r"/root/datasets/cifar-10-batches-py"
+        self.cifar10_root_dir = r"/media/data1/datasets/cifar-10-batches-py"
         self.is_train = train
         self.transform = transform
         self.imgs, self.labels = self.get_data_from_pickled_files(self.is_train)
