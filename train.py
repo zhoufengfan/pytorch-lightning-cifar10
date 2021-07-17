@@ -11,14 +11,15 @@ from backbone import LitResnet
 if __name__ == '__main__':
     model = LitResnet(lr=2e-3)
     model.datamodule = cifar10_dm
-    checkpoint_callback = ModelCheckpoint(dirpath='lightning_logs/',monitor='val/loss')
+    checkpoint_callback = ModelCheckpoint(dirpath='lightning_logs/',monitor='val_acc')
     trainer = Trainer(
         progress_bar_refresh_rate=10,
-        max_epochs=60,
+        max_epochs=1,
         gpus=AVAIL_GPUS,
         callbacks=[checkpoint_callback],
         accelerator='ddp',
         plugins=DDPPlugin(find_unused_parameters=False),
+        precision=16
     )
 
     trainer.fit(model, cifar10_dm)
