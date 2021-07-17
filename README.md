@@ -17,17 +17,17 @@ Then download the CIFAR10 dataset from https://www.cs.toronto.edu/~kriz/cifar-10
 tar -xzf cifar-10-python.tar.gz
 ```
 
-Edit the CIFAR10.cifar10_root_dir to the path of your dataset.
+Edit the CIFAR10.cifar10_root_dir in `dataset.py` to the path of your dataset.
 
 Run the following command to start your experiment:
 ``` bash
-CUDA_VISIBLE_DEVICES=[your_avail_gpus] python train.py
+python train.py
 ```
-(e.g
-`
-CUDA_VISIBLE_DEVICES=0,1,2 python train.py
-`)
+
 ## Reuslt
-Test accuracy: 0.847
+Test accuracy: 0.83170
 
 If you have any questions, feel free to post an issue.
+
+## Note
+By default, the model will be trained in fp16. If you don't want to train the model in fp16, you can delete `precision=16` in `train.py`.

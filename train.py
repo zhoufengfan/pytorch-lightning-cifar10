@@ -14,7 +14,7 @@ if __name__ == '__main__':
     checkpoint_callback = ModelCheckpoint(dirpath='lightning_logs/',monitor='val_acc')
     trainer = Trainer(
         progress_bar_refresh_rate=10,
-        max_epochs=1,
+        max_epochs=60,
         gpus=AVAIL_GPUS,
         callbacks=[checkpoint_callback],
         accelerator='ddp',
